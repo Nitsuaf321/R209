@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Instant Weather</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <header>
+        <h1>Instant Weather</h1>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h2>Rechercher une météo</h2>
+            <form id="weather-form">
+                
+                <div class="form-group">
+                    <label for="postal-code">Code postal :</label>
+                    <input type="text" id="postal-code" name="postal-code" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="city-select">Commune :</label>
+                    <select id="city-select" name="city-select" disabled aria-disabled="true">
+                        <option value="">Saisissez d'abord un code postal</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="search-btn" disabled>Afficher la météo</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
