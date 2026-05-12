@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Instant Weather</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="en-tete-principal panneau-verre">
+        <h1>🌤️ Instant Weather</h1>
+        <p>Projet de groupe Javascript</p>
+    </header>
+
+    <main class="tableau-bord">
+        <section class="section-recherche panneau-verre">
+            <h2>Recherche</h2>
+            <form id="formulaire-meteo">
+                
+                <div class="groupe-saisie">
+                    <label for="cp">Code Postal</label>
+                    <input type="text" id="cp" placeholder="Ex: 35000" maxlength="5" required>
+                </div>
+
+                <button type="button" id="btn-chercher-communes">Valider le code postal</button>
+
+                <div id="zone-commune" class="groupe-saisie cache" style="margin-top: 20px;">
+                    <label for="commune">Commune</label>
+                    <select id="commune" required>
+                        <option value="">Sélectionnez une commune...</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btn-valider" class="cache" disabled>Afficher la météo</button>
+            </form>
+        </section>
+
+        <section id="resultats" class="section-resultats panneau-verre cache">
+            <h2>📍 <span id="nom-ville">...</span></h2>
+            
+            <div class="grille-meteo">
+                <div class="boite-meteo">
+                    <span class="icone">📉</span>
+                    <span class="etiquette">Temp. Min</span>
+                    <span class="valeur"><strong id="t-min">--</strong> °C</span>
+                </div>
+                <div class="boite-meteo">
+                    <span class="icone">📈</span>
+                    <span class="etiquette">Temp. Max</span>
+                    <span class="valeur"><strong id="t-max">--</strong> °C</span>
+                </div>
+                <div class="boite-meteo">
+                    <span class="icone">☔</span>
+                    <span class="etiquette">Pluie</span>
+                    <span class="valeur"><strong id="proba-pluie">--</strong> %</span>
+                </div>
+                <div class="boite-meteo">
+                    <span class="icone">☀️</span>
+                    <span class="etiquette">Soleil</span>
+                    <span class="valeur"><strong id="soleil">--</strong> h</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
