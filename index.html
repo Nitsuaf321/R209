@@ -16,19 +16,22 @@
         <section class="section-recherche panneau-verre">
             <h2>Recherche</h2>
             <form id="formulaire-meteo">
+                
                 <div class="groupe-saisie">
                     <label for="cp">Code Postal</label>
                     <input type="text" id="cp" placeholder="Ex: 35000" maxlength="5" required>
                 </div>
 
-                <div class="groupe-saisie">
+                <button type="button" id="btn-chercher-communes">Valider le code postal</button>
+
+                <div id="zone-commune" class="groupe-saisie cache" style="margin-top: 20px;">
                     <label for="commune">Commune</label>
                     <select id="commune" required>
-                        <option value="">Entrez un code postal...</option>
+                        <option value="">Sélectionnez une commune...</option>
                     </select>
                 </div>
 
-                <button type="submit" id="btn-valider" disabled>Afficher la météo</button>
+                <button type="submit" id="btn-valider" class="cache" disabled>Afficher la météo</button>
             </form>
         </section>
 
