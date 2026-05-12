@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1504608524841-42ce6b140241?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.panneau-verre {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.en-tete-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+
+.en-tete-principal h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.en-tete-principal p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.tableau-bord {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-recherche {
+    flex: 1;
+    padding: 30px;
+    height: fit-content;
+}
+
+.section-resultats {
+    flex: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.groupe-saisie {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #dfe6e9;
+}
+
+input, select {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #74ebd5;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+select option {
+    background: #2d3436;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover:not(:disabled) {
+    background: #74ebd5;
+    color: #2d3436;
+}
+
+button:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+}
+
+.cache {
+    display: none !important;
+}
+
+.grille-meteo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.boite-meteo {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.boite-meteo .icone {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.boite-meteo .etiquette {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.boite-meteo .valeur {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.boite-meteo strong {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+@media (max-width: 850px) {
+    .tableau-bord {
+        flex-direction: column;
+    }
+    
+    .en-tete-principal {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
